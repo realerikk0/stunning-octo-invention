@@ -94,16 +94,16 @@ body {
 .theme-glass .theme-btn {
     position: relative;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.25) 0%,
-        rgba(255, 255, 255, 0.15) 100%);
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.10) 100%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     border-radius: 16px;
     color: white;
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45),
         inset 0 -1px 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -144,11 +144,11 @@ body {
 
 .theme-glass .theme-btn.active {
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.35) 0%,
-        rgba(255, 255, 255, 0.25) 100%);
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0.18) 100%);
     box-shadow:
         0 12px 40px rgba(0, 0, 0, 0.18),
-        inset 0 2px 0 rgba(255, 255, 255, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.5),
         inset 0 -2px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -156,14 +156,14 @@ body {
 .theme-glass .navbar {
     position: relative;
     background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.20) 0%,
-        rgba(255, 255, 255, 0.12) 100%);
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.08) 100%);
     backdrop-filter: blur(30px) saturate(200%);
     -webkit-backdrop-filter: blur(30px) saturate(200%);
-    border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.25);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
         inset 0 -1px 0 rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
@@ -235,10 +235,10 @@ body {
 .theme-glass .nav-cta {
     position: relative;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.30) 0%,
-        rgba(255, 255, 255, 0.20) 100%);
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.14) 100%);
     backdrop-filter: blur(15px) saturate(180%);
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     color: white;
     padding: 10px 24px;
     border-radius: 16px;
@@ -247,7 +247,7 @@ body {
     transition: all 0.3s ease;
     box-shadow:
         0 4px 16px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
     overflow: hidden;
 }
 
@@ -272,12 +272,12 @@ body {
 
 .theme-glass .nav-cta:hover {
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.40) 0%,
-        rgba(255, 255, 255, 0.30) 100%);
+        rgba(255, 255, 255, 0.28) 0%,
+        rgba(255, 255, 255, 0.20) 100%);
     transform: translateY(-2px);
     box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        inset 0 1px 0 rgba(255, 255, 255, 0.52);
 }
 
 /* 英雄区域 - 玻璃态 */
@@ -329,17 +329,17 @@ body {
     text-align: center;
     padding: 2rem;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.25) 0%,
-        rgba(255, 255, 255, 0.15) 100%);
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.10) 100%);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
     border-radius: 24px;
-    border: 2px solid rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.30);
     min-width: 150px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
@@ -381,13 +381,13 @@ body {
 .theme-glass .stat-item:hover {
     transform: translateY(-8px) scale(1.03);
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.30) 0%,
-        rgba(255, 255, 255, 0.20) 100%);
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.14) 100%);
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.2),
-        inset 0 2px 0 rgba(255, 255, 255, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.5),
         inset 0 -2px 0 rgba(0, 0, 0, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.45);
 }
 
 .theme-glass .stat-value {
@@ -421,15 +421,15 @@ body {
 .theme-glass .btn-primary {
     position: relative;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.35) 0%,
-        rgba(255, 255, 255, 0.25) 100%);
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0.18) 100%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.38);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.15),
-        inset 0 2px 0 rgba(255, 255, 255, 0.5),
+        inset 0 2px 0 rgba(255, 255, 255, 0.45),
         inset 0 -2px 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -482,14 +482,14 @@ body {
 
 .theme-glass .btn-primary:hover {
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.45) 0%,
-        rgba(255, 255, 255, 0.35) 100%);
+        rgba(255, 255, 255, 0.32) 0%,
+        rgba(255, 255, 255, 0.24) 100%);
     transform: translateY(-4px);
     box-shadow:
         0 16px 48px rgba(0, 0, 0, 0.25),
-        inset 0 2px 0 rgba(255, 255, 255, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.55),
         inset 0 -2px 0 rgba(0, 0, 0, 0.15);
-    border-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .theme-glass .btn-secondary {
@@ -528,16 +528,16 @@ body {
     position: relative;
     padding: 2.5rem;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.22) 0%,
-        rgba(255, 255, 255, 0.14) 100%);
+        rgba(255, 255, 255, 0.16) 0%,
+        rgba(255, 255, 255, 0.09) 100%);
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
     border-radius: 24px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.28);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
@@ -586,13 +586,13 @@ body {
 .theme-glass .feature-card:hover {
     transform: translateY(-12px) scale(1.02);
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.28) 0%,
-        rgba(255, 255, 255, 0.18) 100%);
+        rgba(255, 255, 255, 0.20) 0%,
+        rgba(255, 255, 255, 0.12) 100%);
     box-shadow:
         0 24px 70px rgba(0, 0, 0, 0.25),
-        inset 0 2px 0 rgba(255, 255, 255, 0.5),
+        inset 0 2px 0 rgba(255, 255, 255, 0.45),
         inset 0 -2px 0 rgba(0, 0, 0, 0.1);
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.38);
 }
 
 .theme-glass .feature-icon {
@@ -629,16 +629,16 @@ body {
     position: relative;
     padding: 2rem;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.24) 0%,
-        rgba(255, 255, 255, 0.16) 100%);
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.11) 100%);
     backdrop-filter: blur(28px) saturate(180%);
     -webkit-backdrop-filter: blur(28px) saturate(180%);
     border-radius: 24px;
-    border: 2px solid rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.30);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow:
         0 10px 40px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.40),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
@@ -688,13 +688,13 @@ body {
 .theme-glass .model-card:hover {
     transform: translateY(-10px) scale(1.03);
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.30) 0%,
-        rgba(255, 255, 255, 0.20) 100%);
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.14) 100%);
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.3),
-        inset 0 2px 0 rgba(255, 255, 255, 0.55),
+        inset 0 2px 0 rgba(255, 255, 255, 0.48),
         inset 0 -2px 0 rgba(0, 0, 0, 0.12);
-    border-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.42);
 }
 
 .theme-glass .model-header {
@@ -714,18 +714,18 @@ body {
     position: relative;
     padding: 4px 12px;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.35) 0%,
-        rgba(255, 255, 255, 0.25) 100%);
+        rgba(255, 255, 255, 0.28) 0%,
+        rgba(255, 255, 255, 0.20) 100%);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 20px;
     font-size: 0.875rem;
     color: white;
     font-weight: 600;
     box-shadow:
         0 2px 8px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
     overflow: hidden;
 }
 
@@ -774,16 +774,16 @@ body {
 .theme-glass .leaderboard-table {
     position: relative;
     background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.20) 0%,
-        rgba(255, 255, 255, 0.14) 100%);
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.09) 100%);
     backdrop-filter: blur(30px) saturate(180%);
     -webkit-backdrop-filter: blur(30px) saturate(180%);
     border-radius: 24px;
-    border: 2px solid rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.30);
     overflow: hidden;
     box-shadow:
         0 12px 48px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -820,13 +820,13 @@ body {
 
 .theme-glass .table-header {
     background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.25) 0%,
-        rgba(255, 255, 255, 0.18) 100%);
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.12) 100%);
     font-weight: 600;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
     position: relative;
 }
 
@@ -870,8 +870,8 @@ body {
 
 .theme-glass .table-row:hover {
     background: linear-gradient(90deg,
-        rgba(255, 255, 255, 0.20) 0%,
-        rgba(255, 255, 255, 0.12) 100%);
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.09) 100%);
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
