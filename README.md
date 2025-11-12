@@ -39,7 +39,9 @@
 
 ```
 stunning-octo-invention/
-├── .gitlab-ci.yml      # GitLab Pages 自动部署配置
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # GitHub Pages 自动部署配置
 ├── index.html          # 主页面
 ├── styles.css          # 样式文件（包含两种主题）
 ├── script.js           # JavaScript 交互逻辑
@@ -48,33 +50,53 @@ stunning-octo-invention/
 
 ## 🚀 如何使用
 
-### 方法 1: 使用 GitLab Pages（在线访问）⭐
+### 方法 1: 使用 GitHub Pages（在线访问）⭐
 
-本项目已配置自动部署到 GitLab Pages！
+本项目已配置自动部署到 GitHub Pages！
 
-**部署步骤：**
+**自动部署步骤：**
 
-1. 将代码推送到 GitLab 仓库的以下任一分支：
-   - `main`
-   - `master`
-   - 当前功能分支
-
-2. GitLab CI/CD 会自动触发部署
-
-3. 几分钟后，访问你的 GitLab Pages 地址：
-   ```
-   https://<你的用户名>.gitlab.io/<仓库名>/
+1. **推送代码到 GitHub：**
+   ```bash
+   git push origin main
+   # 或者推送到当前分支
+   git push origin claude/llm-arena-style-demo-011CV41JRK9ZyGnCjRbSYuwz
    ```
 
-**查看部署状态：**
-- 在 GitLab 项目页面，进入 `CI/CD > Pipelines`
-- 查看最新的 pipeline 运行状态
-- 部署成功后，进入 `Settings > Pages` 查看网站地址
+2. **启用 GitHub Pages：**
+   - 进入 GitHub 仓库页面
+   - 点击 `Settings` > `Pages`
+   - 在 `Build and deployment` 部分
+   - Source 选择：`GitHub Actions`
+   - 保存设置
 
-**注意事项：**
-- 确保项目的 `Settings > General > Visibility` 已正确配置
-- 如果是私有项目，需要在 `Settings > Pages` 中配置访问权限
-- 首次部署可能需要 5-10 分钟
+3. **查看部署进度：**
+   - 点击仓库的 `Actions` 标签
+   - 查看 "Deploy to GitHub Pages" 工作流
+   - 等待部署完成（通常 1-2 分钟）
+
+4. **访问网站：**
+   - 部署成功后，在 `Settings > Pages` 查看网站地址
+   - 格式：`https://<你的用户名>.github.io/<仓库名>/`
+   - 或在 Actions 的部署日志中找到链接
+
+**支持的分支：**
+- ✅ `main`
+- ✅ `master`
+- ✅ `claude/llm-arena-style-demo-011CV41JRK9ZyGnCjRbSYuwz`
+
+**首次部署注意事项：**
+- 必须在 Settings > Pages 中将 Source 设为 `GitHub Actions`
+- 确保仓库是公开的（或者有 GitHub Pro）
+- 首次部署可能需要 5-10 分钟生效
+- 后续更新通常 2-3 分钟内生效
+
+**手动触发部署：**
+如果需要手动触发部署：
+1. 进入 `Actions` 标签
+2. 选择 "Deploy to GitHub Pages" 工作流
+3. 点击 `Run workflow` 按钮
+4. 选择分支并运行
 
 ### 方法 2: 直接打开 HTML 文件
 

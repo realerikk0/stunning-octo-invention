@@ -1,0 +1,70 @@
+name: Deploy to GitHub Pages
+
+# 触发条件
+on:
+  # 当推送到这些分支时触发
+  push:
+    branches:
+      - main
+      - master
+      - claude/llm-arena-style-demo-011CV41JRK9ZyGnCjRbSYuwz
+
+  # 允许手动触发
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许一个并发部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 构建任务
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+
+      - name: 验证文件
+        run: |
+          echo "✅ 验证必要文件..."
+          test -f index.html || exit 1
+          test -f styles.css || exit 1
+          test -f script.js || exit 1
+          echo "✅ 所有文件都存在！"
+
+      - name: 显示文件列表
+        run: |
+          echo "📁 准备部署的文件："
+          ls -lah
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@v4
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  # 部署任务
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 显示部署信息
+        run: |
+          echo "🎉 部署成功！"
+          echo "🌐 网站地址: ${{ steps.deployment.outputs.page_url }}"
