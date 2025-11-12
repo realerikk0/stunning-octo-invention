@@ -39,21 +39,50 @@
 
 ```
 stunning-octo-invention/
+├── .gitlab-ci.yml      # GitLab Pages 自动部署配置
 ├── index.html          # 主页面
 ├── styles.css          # 样式文件（包含两种主题）
 ├── script.js           # JavaScript 交互逻辑
-└── README.md          # 项目说明
+└── README.md           # 项目说明
 ```
 
 ## 🚀 如何使用
 
-### 方法 1: 直接打开 HTML 文件
+### 方法 1: 使用 GitLab Pages（在线访问）⭐
+
+本项目已配置自动部署到 GitLab Pages！
+
+**部署步骤：**
+
+1. 将代码推送到 GitLab 仓库的以下任一分支：
+   - `main`
+   - `master`
+   - 当前功能分支
+
+2. GitLab CI/CD 会自动触发部署
+
+3. 几分钟后，访问你的 GitLab Pages 地址：
+   ```
+   https://<你的用户名>.gitlab.io/<仓库名>/
+   ```
+
+**查看部署状态：**
+- 在 GitLab 项目页面，进入 `CI/CD > Pipelines`
+- 查看最新的 pipeline 运行状态
+- 部署成功后，进入 `Settings > Pages` 查看网站地址
+
+**注意事项：**
+- 确保项目的 `Settings > General > Visibility` 已正确配置
+- 如果是私有项目，需要在 `Settings > Pages` 中配置访问权限
+- 首次部署可能需要 5-10 分钟
+
+### 方法 2: 直接打开 HTML 文件
 
 1. 下载或克隆此项目
 2. 直接双击打开 `index.html` 文件
 3. 浏览器会自动运行
 
-### 方法 2: 使用本地服务器（推荐）
+### 方法 3: 使用本地服务器（推荐用于本地开发）
 
 ```bash
 # 使用 Python 3
@@ -68,7 +97,7 @@ npx http-server -p 8000
 
 然后在浏览器访问：`http://localhost:8000`
 
-### 方法 3: 使用 Live Server (VS Code)
+### 方法 4: 使用 Live Server (VS Code)
 
 1. 安装 VS Code 的 "Live Server" 扩展
 2. 右键点击 `index.html`

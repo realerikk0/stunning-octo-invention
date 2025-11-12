@@ -1,0 +1,62 @@
+# GitLab Pages 部署配置
+# 这个配置会自动将你的静态网站部署到 GitLab Pages
+
+# 使用官方的 Alpine Linux 镜像（轻量级）
+image: alpine:latest
+
+# 定义 pages job（必须命名为 pages）
+pages:
+  stage: deploy
+
+  # 安装必要的工具（可选，这里只是为了演示）
+  before_script:
+    - echo "开始部署到 GitLab Pages..."
+
+  # 构建脚本
+  script:
+    # 创建 public 目录（GitLab Pages 要求）
+    - mkdir -p public
+
+    # 复制所有网站文件到 public 目录
+    - cp index.html public/
+    - cp styles.css public/
+    - cp script.js public/
+    - cp README.md public/
+
+    # 显示部署的文件
+    - echo "部署的文件列表："
+    - ls -lah public/
+
+    # 显示成功消息
+    - echo "✅ 网站文件已准备就绪！"
+
+  # 定义 artifacts（必须包含 public 目录）
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 day
+
+  # 只在特定分支上部署（可以根据需要修改）
+  only:
+    - main
+    - master
+    - claude/llm-arena-style-demo-011CV41JRK9ZyGnCjRbSYuwz
+
+  # 可选：添加缓存以加速构建
+  cache:
+    paths:
+      - public
+
+# 可选：添加一个测试 job 来验证文件
+test:
+  stage: test
+  script:
+    - echo "验证 HTML 文件..."
+    - test -f index.html || exit 1
+    - test -f styles.css || exit 1
+    - test -f script.js || exit 1
+    - echo "✅ 所有文件都存在！"
+  only:
+    - main
+    - master
+    - claude/llm-arena-style-demo-011CV41JRK9ZyGnCjRbSYuwz
